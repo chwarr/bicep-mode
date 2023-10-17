@@ -52,7 +52,7 @@
 (with-eval-after-load 'lsp-mode
  (add-to-list 'lsp-language-id-configuration '(bicep-mode . "bicep"))
  (lsp-register-client
-  (make-lsp-client :new-connection(lsp-stdio-connection '("dotnet" "/usr/local/bin/bicep-langserver/Bicep.LangServer.dll"))
+  (make-lsp-client :new-connection(lsp-stdio-connection "C:/Tools/Bicep.LangServer/current/Bicep.LangServer.exe")
                    :activation-fn (lsp-activate-on "bicep")
                    :server-id 'bicep)))
 
